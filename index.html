@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congratulations Sayanggg 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08050a;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* OPENING */
+.opening{
+    position:fixed;
+    inset:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:radial-gradient(circle at center,#6b2c50 0%,#21101b 40%,#070408 100%);
+    transition:1.3s ease;
+}
+
+.opening.hide{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(1.15);
+}
+
+.open-content{
+    padding:30px;
+    animation:openingIn 1.5s ease;
+}
+
+.crown{
+    font-size:55px;
+    margin-bottom:15px;
+    animation:crownFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes crownFloat{
+    0%,100%{
+        transform:translateY(0) rotate(-3deg);
+    }
+    50%{
+        transform:translateY(-12px) rotate(3deg);
+    }
+}
+
+.open-content .mini{
+    letter-spacing:5px;
+    font-size:11px;
+    color:#f6c5dc;
+}
+
+.open-content h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(40px,11vw,75px);
+    margin:15px 0;
+    background:linear-gradient(90deg,#fff,#ffb4d5,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+    background-size:200%;
+    animation:shine 3s infinite;
+}
+
+@keyframes shine{
+    0%{
+        background-position:0%;
+    }
+    50%{
+        background-position:100%;
+    }
+    100%{
+        background-position:0%;
+    }
+}
+
+.open-content p{
+    color:#eacbd9;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+.open-btn{
+    border:1px solid rgba(255,255,255,.4);
+    background:rgba(255,255,255,.08);
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:14px;
+    letter-spacing:2px;
+    cursor:pointer;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(255,120,180,.2);
+    transition:.3s;
+}
+
+.open-btn:hover{
+    transform:scale(1.06);
+    background:rgba(255,130,190,.18);
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    padding:70px 20px;
+    background:radial-gradient(circle at 50% 20%,#6a2c4f 0%,#21101b 35%,#08050a 75%);
+}
+
+.glow{
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:#ff5ca8;
+    filter:blur(150px);
+    opacity:.13;
+}
+
+.glow.one{
+    top:-200px;
+    left:-150px;
+}
+
+.glow.two{
+    bottom:-250px;
+    right:-150px;
+}
+
+.hero-content{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.overline{
+    font-size:11px;
+    letter-spacing:5px;
+    color:#e9aecb;
+    margin-bottom:14px;
+}
+
+/* FOTO */
+.photo-wrap{
+    width:min(75vw,360px);
+    height:min(75vw,360px);
+    margin:0 auto 40px;
+    position:relative;
+}
+
+.photo-ring{
+    position:absolute;
+    inset:-12px;
+    border:1px solid rgba(255,190,220,.5);
+    border-radius:50%;
+    animation:spin 18s linear infinite;
+}
+
+.photo-ring::before,
+.photo-ring::after{
+    content:"✦";
+    position:absolute;
+    color:#ffd3e5;
+    font-size:18px;
+}
+
+.photo-ring::before{
+    top:-10px;
+    left:50%;
+}
+
+.photo-ring::after{
+    bottom:-10px;
+    right:20%;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.photo{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    border:7px solid rgba(255,255,255,.12);
+    box-shadow:
+        0 0 0 2px rgba(255,180,215,.4),
+        0 0 60px rgba(255,80,160,.3);
+}
+
+/* TITLE */
+.hero-title{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(45px,10vw,92px);
+    line-height:.95;
+    font-weight:600;
+}
+
+.hero-title span{
+    display:block;
+    color:#ff9fc9;
+    text-shadow:0 0 30px rgba(255,100,170,.35);
+}
+
+.subtitle{
+    max-width:550px;
+    margin:25px auto 35px;
+    color:#d8bdca;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* MESSAGE */
+.message-section{
+    position:relative;
+    padding:100px 20px;
+    background:#0b070c;
+}
+
+.message-container{
+    max-width:850px;
+    margin:auto;
+}
+
+.section-label{
+    color:#e999bd;
+    letter-spacing:4px;
+    font-size:10px;
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.message-title{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(35px,7vw,65px);
+    margin-bottom:50px;
+}
+
+.message-title span{
+    color:#ff9fc9;
+}
+
+.letter{
+    padding:45px clamp(25px,7vw,70px);
+    border:1px solid rgba(255,190,220,.16);
+    background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+    border-radius:30px;
+    box-shadow:0 30px 80px rgba(0,0,0,.3);
+}
+
+.letter p{
+    color:#dfcbd4;
+    line-height:2;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.letter .big-text{
+    color:white;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(25px,6vw,45px);
+    line-height:1.3;
+    text-align:center;
+    margin:35px 0;
+}
+
+.letter .big-text span{
+    color:#ff9fc9;
+}
+
+/* NOMOR SATU */
+.number-one{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px;
+    position:relative;
+    overflow:hidden;
+    background:radial-gradient(circle,#4b2038 0%,#170b13 40%,#08050a 75%);
+}
+
+.number-one-content{
+    position:relative;
+    z-index:2;
+}
+
+.one{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(130px,30vw,270px);
+    line-height:.8;
+    color:#ff9fc9;
+    text-shadow:
+        0 0 20px rgba(255,100,170,.4),
+        0 0 100px rgba(255,100,170,.25);
+}
+
+.number-one h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(30px,7vw,65px);
+    margin-top:35px;
+}
+
+.number-one h2 span{
+    color:#ffb0d2;
+}
+
+.number-one p{
+    margin:20px auto 0;
+    max-width:500px;
+    color:#d4bdc8;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* FOOTER */
+footer{
+    padding:70px 20px;
+    text-align:center;
+    background:#060407;
+}
+
+footer .heart{
+    font-size:40px;
+    animation:heart 1.3s infinite;
+}
+
+@keyframes heart{
+    0%,100%{
+        transform:scale(1);
+    }
+    20%{
+        transform:scale(1.2);
+    }
+    40%{
+        transform:scale(1);
+    }
+}
+
+footer h3{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    margin:15px 0 8px;
+}
+
+footer p{
+    color:#9f8995;
+    font-size:12px;
+}
+
+/* PARTICLES */
+.particle{
+    position:fixed;
+    pointer-events:none;
+    z-index:10;
+    animation:particleFall linear forwards;
+}
+
+@keyframes particleFall{
+    from{
+        transform:translateY(-30px) rotate(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .hero{
+        padding-top:90px;
+    }
+
+    .letter{
+        padding:30px 22px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+<section class="opening" id="opening">
+
+    <div class="open-content">
+
+        <div class="crown">
+            👑
+        </div>
+
+        <div class="mini">
+            A LITTLE MESSAGE FOR YOU
+        </div>
+
+        <h1>
+            Congratulations
+        </h1>
+
+        <p>
+            Ada sesuatu yang mau Hisin sampaikan...
+        </p>
+
+        <button class="open-btn" onclick="openPage()">
+            BUKA UCAPANNYA ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <div class="hero-content">
+
+        <div class="overline">
+            MISS MD MALL • FINALIST
+        </div>
+
+        <div class="photo-wrap">
+
+            <img
+                class="photo"
+                src="lip.jpg"
+                alt="Foto Sayang"
+            >
+
+            <div class="photo-ring"></div>
+
+        </div>
+
+        <h1 class="hero-title">
+
+            Congratulations
+
+            <span>
+                Sayangggg! 💗
+            </span>
+
+        </h1>
+
+        <p class="subtitle">
+
+            Selamattt yaaa sayanggg 🥹💗
+
+            <br><br>
+
+            Hisin bangga banget sama kamu.
+
+            Kamu udah berani melangkah,
+            berani tampil,
+            dan memberikan yang terbaik.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MESSAGE -->
+<section class="message-section">
+
+    <div class="message-container">
+
+        <div class="section-label">
+            FOR MY FAVORITE GIRL
+        </div>
+
+        <h2 class="message-title">
+
+            Kamu selalu punya
+            <br>
+
+            <span>
+                tempat spesial.
+            </span>
+
+        </h2>
+
+        <div class="letter">
+
+            <p>
+                Sayanggg, selamat yaaa atas pencapaian
+                kamu di Miss MD Mall. 👑✨
+            </p>
+
+            <p>
+                Hisin tahu kamu udah berusaha,
+                udah berani tampil,
+                dan udah memberikan yang terbaik
+                dari diri kamu sendiri.
+            </p>
+
+            <div class="big-text">
+
+                "Buat orang lain mungkin
+                kamu adalah salah satu dari banyak orang..."
+
+                <br><br>
+
+                <span>
+                    "Tapi buat Hisin,
+                    kamu tetap nomor 1." ❤️
+                </span>
+
+            </div>
+
+            <p>
+                Jangan pernah ngerasa kamu kurang,
+                karena buat Hisin kamu tetap seseorang
+                yang paling spesial.
+            </p>
+
+            <p>
+                Apapun hasilnya,
+                Hisin tetap bangga sama kamu.
+            </p>
+
+            <p
+                style="
+                text-align:center;
+                margin-top:35px;
+                "
+            >
+
+                <b
+                    style="
+                    color:#ffb0d2;
+                    font-size:20px;
+                    "
+                >
+                    Kamu tetap nomor 1
+                    di hati Hisin. 💗
+                </b>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NOMOR SATU -->
+<section class="number-one">
+
+    <div class="glow one"></div>
+
+    <div class="number-one-content">
+
+        <div class="one">
+            1
+        </div>
+
+        <h2>
+            Tetap
+            <span>
+                Nomor 1
+            </span>
+        </h2>
+
+        <p>
+
+            Bukan karena sebuah perlombaan,
+            bukan karena sebuah gelar,
+
+            <br><br>
+
+            tapi karena kamu punya tempat
+            yang nggak bisa digantikan
+            siapa-siapa di hati Hisin. ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="heart">
+        ❤️
+    </div>
+
+    <h3>
+        Proud of you, sayanggg.
+    </h3>
+
+    <p>
+        From Hisin, with all my heart.
+    </p>
+
+</footer>
+
+
+<script>
+
+function openPage(){
+
+    const opening =
+        document.getElementById("opening");
+
+    opening.classList.add("hide");
+
+    createParticles();
+
+    setTimeout(function(){
+
+        opening.style.display="none";
+
+    },1300);
+
+}
+
+
+function createParticles(){
+
+    const symbols = [
+        "💗",
+        "✨",
+        "💕",
+        "✦",
+        "🌸",
+        "💖"
+    ];
+
+    for(let i=0;i<45;i++){
+
+        const p =
+            document.createElement("div");
+
+        p.className="particle";
+
+        p.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+        p.style.left =
+            Math.random()*100+"vw";
+
+        p.style.fontSize =
+            (10 + Math.random()*18)+"px";
+
+        p.style.animationDuration =
+            (3 + Math.random()*5)+"s";
+
+        p.style.animationDelay =
+            Math.random()*2+"s";
+
+        document.body.appendChild(p);
+
+        setTimeout(function(){
+
+            p.remove();
+
+        },9000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
